@@ -5,36 +5,39 @@
 	<title>Starmax</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	<div class='wrapper'>
 		<nav class='wrapper-buttons'>
-			<a class='page__navigation'><span>01</span></a>
-			<a class='page__navigation'><span>02</span></a>
-			<a class='page__navigation'><span>03</span></a>
-			<a class='page__navigation'><span>04</span></a>
-			<a class='page__navigation'><span>05</span></a>
+			<a href='#greatings' class='page__navigation'><span>01</span></a>
+			<a href='#review' class='page__navigation'><span>02</span></a>
+			<a href='#why' class='page__navigation'><span>03</span></a>
+			<a href='#purchse' class='page__navigation'><span>04</span></a>
+			<a href='#contacts' class='page__navigation'><span>05</span></a>
 		</nav>
-		<div class='slide__greatings slide'>
-			<div class='greatings__img'>
-				<img src='' alt=''>
+		<section id='greatings' class='slide__greatings slide'>
+			<div class="greatings__container pageColumn">
+				<h1>STARMAX</h1>
+				<div class='greatings__desc-container'>
+					<p class='description'>Ідеальне кріплення для Starlink, яке дозволить мати зв'язок в квартирі або приватному
+						будинку у будь-якій ситуації</p>
+					<div class='greatings__buy-flex'>
+						<p class='greatings__price buy-price'><span>$2000</span></p>
+						<button id='button-request' data-param='Придбати Starmax'
+							class='greatings__buy-button buy-button'>Придбати</button>
+					</div>
+				</div>
+				<div class='greatings__more'>
+					<p>Дізнатись більше</p>
+
+					<img src='' alt=' '>
+				</div>
 			</div>
-			<h1>STARMAX</h1>
-			<div class='greatings__desc-container'></div>
-			<p class='description'>Ідеальне кріплення для Starlink, яке дозволить мати зв'язок в квартирі або приватному будинку у будь-якій ситуації</p>
-			<div class='greatings__buy-flex'>
-				<p class='greatings__price buy-price'><span>$2000</span></p>
-				<button id='button-request' data-param='Придбати Starmax' class='greatings__buy-button buy-button'>Придбати</button>
-			</div>
-			<div class='greatings__more'>
-				<p>Дізнатись більше</p>
-				<img src='' alt=' '>
-			</div>
-		</div>
-		<div class='slide__review pageColumn slide'>
+		</section>
+		<section class='slide__review pageColumn slide'>
 			<div class='review-flex'>
 				<div class='review__video-area'>
 					<div class='review__video-footnote'>
@@ -51,8 +54,8 @@
 					<button id='button-request' data-param='Хочу Starmax' class='review__button'></button>
 				</div>
 			</div>
-		</div>
-		<div class='slide__why pageColumn slide'>
+		</section>
+		<section class='slide__why pageColumn slide'>
 			<h2 class='title'>Чому Starmax?</h2>
 			<div class='why__container swipper-container'>
 				<div class='why__wrapper swipper-wrapper'>
@@ -82,14 +85,15 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class='slide__purchase pageColumn slide'>
+		</section>
+		<section class='slide__purchase pageColumn slide'>
 			<div class='purchase-flex'>
 				<div class='purchase__text'>
 					<h2 class='title'>Придбайте свій Starmsx</h2>
 					<div class='purchase__buy-flex'>
 						<p class='purchase__price buy-price'><span>$2000</span></p>
-						<button id='button-request' data-param='Придбати Starmax' class='purchase__buy-button buy-button'>Придбати</button>
+						<button id='button-request' data-param='Придбати Starmax'
+							class='purchase__buy-button buy-button'>Придбати</button>
 					</div>
 				</div>
 				<div class='purchase__img'>
@@ -120,17 +124,18 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class='slide__contacts slide'>
+		</section>
+		<footer class='slide__contacts pageColumn slide'>
 			<h2 class='title'>Залишились питання?</h2>
 			<p class='description'>Напишіть нам в телеграм і ми залюбки відповімо на них!</p>
-			<button id='button-request' data-param='Залишились питання' >
+			<button id='button-request' data-param='Залишились питання'>
 				<img src=''>
 			</button>
-		</div>
+		</footer>
 	</div>
-	
+
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<!-- <script src='script.js'></script> -->
 </body>
+
 </html>

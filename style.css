@@ -4,30 +4,22 @@
   margin: 0;
   border: 0;
 }
-*,
-*:before,
-*:after {
+*,*:before,*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-:focus,
-:active {
+:focus,:active {
   outline: none;
 }
-a:focus,
-a:active {
+a:focus,a:active {
   outline: none;
 }
-nav,
-footer,
-header,
-aside {
+nav,footer,header,aside {
   display: block;
 }
-html,
-body {
-  /* height: 100%; */
+html,body {
+  height: 100%;
   width: 100%;
   font-size: 14px;
   font-size: 100%;
@@ -36,9 +28,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-input,
-button,
-textarea {
+input,button,textarea {
   font-family: inherit;
 }
 
@@ -65,32 +55,63 @@ ul li {
 img {
   vertical-align: top;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-size: inherit;
   font-weight: 400;
 }
 /*------------------------------------------------*/
+@font-face{
+	font-family: 'Ethnocentric';
+	src: url('fonts/Ethnocentric.eot');
+	src: local('0'), url('fonts/Ethnocentric.woff') format('woff'), url('fonts/Ethnocentric.ttf') format('truetype'), url('fonts/Ethnocentric.svg') format('svg');
+	font-weight: normal;
+	font-style: normal; 
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+/*! sdfsfsdf */
 body{
 	height: 100%;
 	width: 100%;
 	background: #161616;
 	color:#fff;
+	font-family: 'Open Sans', sans-serif;
 }
+
+.wrapper{
+	overflow: hidden;
+}
+.pageColumn{
+	max-width: 800px;
+	margin: 0 auto;
+}
+/*========Navi=======*/
+.wrapper-buttons{
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform-origin: left;
+	-ms-transform: rotate(90deg) translate(50%, 100px); /* IE 9 */
+	-webkit-transform: rotate(90deg) translate(50%, 100px); /* Safari and Chrome */
+	transform: rotate(90deg) translate(-50%, -25px);
+}
+
 .page__navigation{
-	font-weight: 700;
-	font-size: 25px;
-	line-height: 34px;
-	letter-spacing: 0.125em;
-	color: #fff;
-transform: rotate(90deg);
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+letter-spacing: 0.125em;
+color: rgba(255, 255, 255, 0.39);
 }
 .page__navigation span:hover{}
 .page__navigation span:active{}
+/*======Section1 - Greatings*/
+.slide__greatings{
+	background: url('img/Greatings_BackGround.png') center/cover no-repeat;
+}
+
 h1{
 	font-family: 'Ethnocentric';
 	font-style: normal;
@@ -100,6 +121,44 @@ h1{
 	letter-spacing: -0.02em;
 	color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*all font Open Sans*/
 .buy-price{
@@ -156,6 +215,11 @@ h1{
 	letter-spacing: 0.085em;
 color: #161616;
 }
+
+
+
+
+
 
 
 
