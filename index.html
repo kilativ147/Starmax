@@ -12,13 +12,16 @@
 <body>
 	<div class='wrapper'>
 		<nav class='wrapper-buttons'>
-			<a href='#greatings' class='page__navigation'><span>01</span></a>
-			<a href='#review' class='page__navigation'><span>02</span></a>
-			<a href='#why' class='page__navigation'><span>03</span></a>
-			<a href='#purchse' class='page__navigation'><span>04</span></a>
-			<a href='#contacts' class='page__navigation'><span>05</span></a>
+			<section class='buttons__container'>
+				<a href='#greatings' class='buttons__navigation _active'><span>01</span></a>
+				<a href='#review' class='buttons__navigation'><span>02</span></a>
+				<a href='#why' class='buttons__navigation'><span>03</span></a>
+				<a href='#purchse' class='buttons__navigation'><span>04</span></a>
+				<a href='#contacts' class='buttons__navigation'><span>05</span></a>
+			</section>
 		</nav>
-		<section id='greatings' class='slide__greatings slide'>
+		<section id='greatings'
+		class='slide__greatings slide'>
 			<div class="greatings__container page-column">
 				<p class="greatings__logo1 logo-shadow">STARMAX</p>
 				<p class="greatings__logo2 logo-shadow">STARMAX</p>
@@ -28,37 +31,59 @@
 					<p class='greatings__description description'>Ідеальне кріплення для Starlink, яке дозволить мати зв'язок в квартирі або приватному
 						будинку у будь-якій ситуації</p>
 					<div class='greatings__buy-flex'>
-						<p class='greatings__price buy-price'><span>$2000</span></p>
+						<p class='greatings__price buy-price'><span>₴2 000</span></p>
 						<button id='button-request' data-param='Придбати Starmax'
 							class='greatings__buy-button buy-button'>Придбати</button>
 					</div>
 				</div>
-				<div class='greatings__more'>
+				<a href='#review' class='greatings__more'>
 					<p>Дізнатись більше</p>
-
-					<img src='' alt=' '>
-				</div>
+					<img src='img/icons/Icon_arrow-down.svg' alt=' '>
+				</a>
 			</div>
 		</section>
-		<section class='slide__review page-column slide'>
+		<section id ='review' class='slide__review page-column slide'>
 			<div class='review-flex'>
-				<div class='review__video-area'>
-					<div class='review__video-footnote'>
-						<img src=''>
-						<p>Дивитись відео</p>
+				<div class='review__video-body'>
+					<div class="review__video-area">
+					<!-- наступний тег э зоною, на яку при клiку виконуэться js скрипт, видаляэться контент зображень, а замiсть них вставляэться вiдео -->
+						<div class="review__video" 
+							onclick="this.style.display='none';
+							var iframe=document.createElement('iframe'); iframe.src='https://www.youtube.com/embed/RZ10luNUptw?autoplay=1&modestbranding=1&showinfo=0&rel=0';
+							iframe.width='560'; iframe.height='315'; iframe.frameborder='0'; 
+							iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+							iframe.allowfullscreen=true; this.parentNode.appendChild(iframe);"
+							>
+							<img style='width: 100%; height: 100%; object-fit: cover;' src='img/Review.png'>
+							<img style='position: absolute; top: 50%; left: 50%; transform: rotate(-90deg) translate(-50%, 0%); height: 50px; width: 50px; ' src='img/icons/Icon_arrow-down.svg'>			
+							<p>Дивитись відео</p>
+						</div>
 					</div>
-					<div class='review__button'>
-						<img src=''>
-					</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				</div>
-				<div class='review__description'>
-					<h2 class='title'>Відеоогляд</h2>
-					<p class='description'>Подивіться наше коротке відео та дізнайтесьбільше про кріплення Starmax!</p>
-					<button id='button-request' data-param='Хочу Starmax' class='review__button'></button>
+				<div class='review__desc'>
+					<h2 class='review__title title'>Відеоогляд</h2>
+					<p class='review__description description'>Подивіться наше коротке відео та дізнайтесьбільше про кріплення Starmax!</p>
+					<button id='button-request' data-param='Хочу Starmax' class='review__desc-button'></button>
 				</div>
 			</div>
 		</section>
-		<section class='slide__why page-column slide'>
+		<section id='why' class='slide__why page-column slide'>
 			<h2 class='title'>Чому Starmax?</h2>
 			<div class='why__container swipper-container'>
 				<div class='why__wrapper swipper-wrapper'>
@@ -89,7 +114,7 @@
 				</div>
 			</div>
 		</section>
-		<section class='slide__purchase page-column slide'>
+		<section id='purchse' class='slide__purchase page-column slide'>
 			<div class='purchase-flex'>
 				<div class='purchase__text'>
 					<h2 class='title'>Придбайте свій Starmsx</h2>
@@ -128,7 +153,7 @@
 				</div>
 			</div>
 		</section>
-		<footer class='slide__contacts page-column slide'>
+		<footer id='contacts' class='slide__contacts page-column slide'>
 			<h2 class='title'>Залишились питання?</h2>
 			<p class='description'>Напишіть нам в телеграм і ми залюбки відповімо на них!</p>
 			<button id='button-request' data-param='Залишились питання'>
