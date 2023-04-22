@@ -134,14 +134,13 @@ body {
 	top: 50%;
 	left: 0;
 	transform-origin: left;
-	-ms-transform: rotate(90deg) translate(50%, 100px);
-	/* IE 9 */
-	-webkit-transform: rotate(90deg) translate(50%, 100px);
-	/* Safari and Chrome */
-	transform: rotate(90deg) translate(-50%, -40px);
+	transform: translateY(-50%);
 }
 
-.buttons__container {}
+.buttons__container {
+	transform: rotate(90deg) translate(110px, 115px);
+	transition: all 0.5s ease;
+}
 
 .buttons__navigation {
 	font-family: 'Open Sans';
@@ -153,6 +152,7 @@ body {
 	letter-spacing: 0.125em;
 	color: rgba(255, 255, 255, 0.39);
 	margin: 0 14px;
+
 }
 
 .buttons__navigation span {
@@ -334,17 +334,39 @@ h1 {
 	color: #fff;
 	text-decoration: none;
 }
-.greatings__more:hover p{
+
+.greatings__more:hover p {
 	color: #9DFFF3;
 }
-.greatings__more:active p{
+
+.greatings__more:active p {
 	color: #50FFEA;
 }
-.greatings__more:hover .greatings__buttom-svg{
+
+.greatings__more:hover .greatings__button-svg {
 	fill: #9DFFF3;
 }
-.greatings__more:active .greatings__buttom-svg{
+
+.greatings__more:active .greatings__button-svg {
 	fill: #50FFEA;
+}
+
+.greatings__more {}
+
+.greatings__button-svg {
+	position: relative;
+	transform-origin: center center;
+	animation: upDown 1.5s linear infinite;
+}
+
+@keyframes upDown {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(0, 10px);
+	}
 }
 
 /*======Section2 - Review========*/
@@ -491,7 +513,8 @@ h1 {
 	.review__description {
 		text-align: center;
 	}
-	.review__desc-button{
+
+	.review__desc-button {
 		font-size: 18px;
 	}
 }
@@ -517,7 +540,7 @@ h1 {
 .swipper-wrapper {}
 
 .why__slide {
-	width: 250px;
+	width: 225px;
 	min-height: 350px;
 	/* width: auto; */
 	border: 1px solid #FFFFFF;
@@ -621,9 +644,11 @@ h1 {
 		/* margin: 0 auto; */
 		text-align: center;
 	}
-	.purchase__buy-flex{
+
+	.purchase__buy-flex {
 		justify-content: center;
-}
+	}
+
 	.purchase__img {
 		align-self: end;
 		margin: 0;
@@ -635,15 +660,19 @@ h1 {
 	overflow: hidden;
 	padding-bottom: 20px;
 }
+
 .swiper-container {}
 
 .purchase-wrapper {}
+
 .swiper-wrapper {}
 
 .purchase-slide {
 	/* max-width: 360px; */
 }
+
 .swiper-slide {}
+
 .purchase-slide__img {
 	width: 100%;
 	height: 100%;
@@ -661,7 +690,7 @@ h1 {
 	transform: scale(1.05);
 }
 
-.swiper-scrollbar-drag{
+.swiper-scrollbar-drag {
 	background-color: rgba(255, 255, 255, 0.055);
 }
 
@@ -698,6 +727,143 @@ h1 {
 .svg__element:active {
 	fill: #50FFEA;
 }
+
+
+
+.popup {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+.popup._active{
+	visibility: visible;
+	transition: all 1s ease;
+}
+
+.popup__background {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup__container {
+  max-width: 700px;
+  background: rgba(10, 10, 10, 0.93);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.31);
+  border-radius: 7px;
+  padding: 45px 80px;
+  position: relative;
+	opacity: 0.5;
+	transform: translateY(100px);
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.popup__container.popup-anim {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.popup__content {}
+
+.popup__form {}
+
+.popup__form h4 {
+	font-size: 40px;
+	line-height: 135%;
+	/* 54/40 */
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	color: #FFFFFF;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.popup__form p {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 138.888889%;
+	/* 25/18 */
+	letter-spacing: 0.125em;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.form__input-text {
+	width: 100%;
+	height: 45px;
+	background: #FFFFFF;
+	border-radius: 6px;
+	padding: 10px 30px;
+	margin-bottom: 20px;
+}
+
+/* .popup__form select{
+	appearance: none;
+	-webkit-appearance: none; Додатково задайте цей префікс для Safari
+	background-image: url('<svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 15L0.5 0L17.5 11L34.5 0L17.5 15Z" fill="black"/>	</svg>');
+	background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.popup__form select option{
+	width: 100%;
+} */
+
+.form__postlabel {}
+
+.form__input-radio {
+	margin-bottom: 20px;
+}
+
+.form__submit {
+	width: 100%;
+	background: #9DFFF3;
+	border: 1px solid #9DFFF3;
+	border-radius: 4px;
+	padding: 18px;
+text-align: center;
+}
+
+.popup__close {
+	position: absolute;
+	top: 30px;
+	right: 37px;
+	background-color: transparent;
+}
+
+
+
+
+
+/*======Слайди з анiмацiею======*/
+.slideToAnimUp,
+.slideToAnimLeft {
+	opacity: 0.5;
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slideToAnimUp {
+	transform: translateY(100px);
+}
+
+.slideToAnimLeft {
+	transform: translateX(400px);
+	transition: opacity 0.5s ease-out 0.35s, transform 0.5s ease-out 0.35s;
+}
+
+.slideToAnimUp.animate,
+.slideToAnimLeft.animate {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
 
 .hidden {
 	display: none;
